@@ -8,10 +8,6 @@ func main() {
 	// only inside a function
 	// go likes single letter variables
 	router := gin.Default()
-	router.GET("/ping", func(context *gin.Context) {
-		context.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	router.GET("/puppy", handlePuppy)
 	router.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
 }
